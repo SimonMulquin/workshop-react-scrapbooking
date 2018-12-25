@@ -1,4 +1,4 @@
-# React Scrapbooking
+# React Scrapbooking - Project set up
 
 ## Naviguer entre les étapes
 
@@ -11,3 +11,7 @@ ou
 git clone https://github.com/SimonMulquin/workshop-react-scrapbooking.git -b 'nomDeLaBranche'
 
 pour rejoindre le projet à l'état d'avancement de la branche choisie.
+
+### Etapes 
+
+ 1. [project set up](https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/1_project_set_up)
