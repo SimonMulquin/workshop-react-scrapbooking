@@ -1,5 +1,5 @@
-import onImageDrop from './onImageDrop';
+import onImagesDrop from './onImagesDrop';
 
 export {
-    onImageDrop,
+    onImagesDrop,
 };

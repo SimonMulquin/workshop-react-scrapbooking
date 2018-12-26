@@ -12,15 +12,14 @@ const StyledDropZone = styled.div`
 `;
 
 export default class DropZone extends Component {
-    constructor(props){
-        super(props);
-
-    };
-
     componentDidMount() {
         window.addEventListener("dragover", e => e.preventDefault(),false);
         window.addEventListener("drop", e => e.preventDefault(),false);
-        this.dropZone.addEventListener('drop', onImageDrop, false)
+        this.dropZone.addEventListener('drop', e => {
+            onImageDrop(e)
+            .then(r => console.log(r))
+            .catch(err => console.log(err))
+        }, false)
     };
 
     render(){
