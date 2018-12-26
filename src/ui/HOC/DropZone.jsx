@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styled from "styled-components";
 
 import config from "config";
-import { onImageDrop } from "services/files";
+import { onImagesDrop } from "services/files";
 
 const StyledDropZone = styled.div`
     display: block;
@@ -16,7 +16,7 @@ export default class DropZone extends Component {
         window.addEventListener("dragover", e => e.preventDefault(),false);
         window.addEventListener("drop", e => e.preventDefault(),false);
         this.dropZone.addEventListener('drop', e => {
-            onImageDrop(e)
+            onImagesDrop(e)
             .then(r => console.log(r))
             .catch(err => console.log(err))
         }, false)
