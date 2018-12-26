@@ -1,4 +1,10 @@
-# React Scrapbooking - Project set up
+# React Scrapbooking
+
+## Technos
+
+* [react](https://reactjs.org/)
+* [styled components](https://www.styled-components.com/)
+* [redux](https://redux.js.org/)
 
 ## Naviguer entre les étapes
 
