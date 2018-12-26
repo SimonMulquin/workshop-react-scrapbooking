@@ -1,14 +1,14 @@
 import React from 'react';
 
+import DropZone from 'ui/HOC/DropZone';
 import { 
   Main,
   Header,
-  StyledDropZone,
 } from "./style";
 
 export default () => <Main>
   <Header>React Scrapbooking</Header>
-  <StyledDropZone>
+  <DropZone>
     Gimme some files
-  </StyledDropZone>
+  </DropZone>
 </Main>
