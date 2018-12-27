@@ -1,4 +1,4 @@
-# React Scrapbooking
+# React Scrapbooking - Store images items
 
 * [Créé un store redux.](https://www.npmjs.com/package/redux)
 
