@@ -1,16 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Container } from './style';
+import { Container, Image } from './style';
 
-const Preview = ({maxZ, items}) => <Container>
+const Preview = ({items}) => <Container>
+    {console.log(items)}
     {Object.keys(items).map(k => {
         const e = items[k];
-        return <img key={e.id} src={e.url} title={e.filename} />
+        return <Image 
+            key={e.id} 
+            src={e.url} 
+            title={e.filename} 
+            alt={e.filename} 
+            position={e.position}
+            width={e.width}
+        />
     })}
 </Container>
 
-export default connect(({preview: {maxZ, items}}) => ({
-    maxZ,
+export default connect(({preview: {items}}) => ({
     items,
 }))(Preview)

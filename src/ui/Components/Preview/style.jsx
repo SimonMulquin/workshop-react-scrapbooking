@@ -5,3 +5,13 @@ export const Container = styled.main`
     position: relative;
     width: 100%;
 `;
+
+export const Image = styled.img`
+    display: block;
+    position: absolute;
+    left: ${({position: {X}}) => X}px;
+    top: ${({position: {Y}}) => Y}px;
+    index: ${({position: {Z}}) => Z};
+    width: ${({width}) => width}px;
+    height: auto;
+`;
