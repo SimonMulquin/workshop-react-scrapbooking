@@ -5,7 +5,7 @@ export default (state = {maxZ: 2, items: {}}, action) => {
         const {filename, url} = action;
         const id = uniqid();
         const maxZ = state.maxZ + 1;
-        let items = state.items;
+        const items = {...state.items};
         items[id] = {
             id,
             filename,
