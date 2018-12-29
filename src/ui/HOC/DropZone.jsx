@@ -22,7 +22,7 @@ class DropZone extends Component {
             .then(r => r.forEach(
                 i => this.props.addItem(i)
             ))
-            .catch(err => console.log(err))
+            .catch(err => alert(err))
         }, false)
     };
 

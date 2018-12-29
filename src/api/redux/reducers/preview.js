@@ -17,12 +17,10 @@ export default (state = {maxZ: 2, items: {}}, action) => {
             },
             size: 100,
         };
-        const newState = {
+        return {
             maxZ,
             items,
         };
-        console.log(newState)
-        return newState;
     };
     return state;
 };

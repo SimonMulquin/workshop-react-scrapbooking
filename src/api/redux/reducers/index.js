@@ -1,5 +1,5 @@
-import items from './items';
+import preview from './preview';
 
 export default {
-    items,
-}
+    preview,
+};
