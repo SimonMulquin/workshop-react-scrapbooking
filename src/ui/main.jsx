@@ -2,8 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import store from 'api/redux';
-import DropZone from 'ui/HOC/DropZone';
-import Preview from 'ui/Components/Preview/main';
+import DropZone from 'ui/DropZone';
+import Preview from 'ui/Preview';
 import { 
   Main,
   Header,

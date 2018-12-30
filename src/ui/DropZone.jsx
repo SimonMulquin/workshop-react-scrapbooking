@@ -5,13 +5,7 @@ import { connect } from 'react-redux';
 import config from "config";
 import { onImagesDrop } from "services/files";
 import { ADD_ITEM } from 'api/redux/actions';
-
-const StyledDropZone = styled.div`
-    display: block;
-    position: relative;
-    width: 100%;
-    height: calc(100vh - ${config.style.headerHeight});
-`;
+import { StyledDropZone } from './style';
 
 class DropZone extends Component {
     componentDidMount() {
