@@ -10,6 +10,7 @@ body {
     width: 100vm;
     overflow-x: hidden;
     font-size: 1vm;
+    cursor: "default";
 }
 
 #root {

@@ -5,7 +5,7 @@ import Image from 'ui/Image';
 import { Container } from './style';
 
 const Preview = ({items}) => <Container>
-    {Object.keys(items).map(k => <Image {...items[k]}/>)}
+    {Object.keys(items).map((k, index) => <Image key={index} {...items[k]}/>)}
 </Container>
 
 export default connect(({preview: {items}}) => ({

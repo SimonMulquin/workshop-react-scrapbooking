@@ -1,3 +1,3 @@
 export default {
-    headerHeight: "3em",
+    headerHeight: 40,
 }
