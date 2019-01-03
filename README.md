@@ -23,5 +23,6 @@ pour rejoindre le projet à l'état d'avancement de la branche choisie.
  1. [project set up](https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/1_project_set_up)
  2. [listen drop event](https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/2_listen_drop_event)
  3. [read images files](https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/3_read_images_files)
- 4. [store images items]( https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/4_store_images_items)
+ 4. [store images items](https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/4_store_images_items)
+ 5. [drag images items](https://github.com/SimonMulquin/workshop-react-scrapbooking/tree/5_drag_images_items)
  
