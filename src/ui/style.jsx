@@ -34,10 +34,23 @@ export const Container = styled.main`
 
 export const StyledImage = styled.img`
     display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+`;
+
+export const Selector = styled.div.attrs(
+    ({ position: {X, Y, Z}, selected, width, height }) => ({
+        style: {
+            left: `${X - (selected ? config.style.selectorBorderSize : 0)}px`,
+            top: `${Y - (selected ? config.style.selectorBorderSize : 0)}px`,
+        }
+    }),
+)`
+    display: block;
     position: absolute;
-    left: ${({position: {X}}) => X}px;
-    top: ${({position: {Y}}) => Y}px;
     index: ${({position: {Z}}) => Z};
     width: ${({width}) => width}px;
-    height: auto;
-`;
+    height: ${({height}) => height}px;
+    ${({selected}) => selected ? `border: ${config.style.selectorBorderSize}px red solid;` : null}
+`

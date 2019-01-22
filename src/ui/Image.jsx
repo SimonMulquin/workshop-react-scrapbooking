@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { StyledImage } from './style';
+import { StyledImage, Selector } from './style';
 import config from 'config';
 
 const { headerHeight } = config.style;
@@ -65,17 +65,28 @@ export default class Image extends Component {
         });
     };
 
+    select(e) {
+        return this.setState({selected: !this.state.selected});
+    };
+
     render(){
-        const { id, url, filename, width} = this.props;
-        return <StyledImage 
+        const { id, url, filename, dimensions: {width, height}} = this.props;
+        return <Selector 
             ref={n => this.image = n}
             key={id} 
-            src={url} 
-            title={filename} 
-            alt={filename} 
             position={this.state.position}
             width={width}
+            height={height}
+            selected={this.state.selected}
             onMouseDown={this.onMouseDown.bind(this)}
-        />
+        >
+            <StyledImage 
+                src={url} 
+                title={filename} 
+                alt={filename} 
+                onClick={this.select.bind(this)}
+            />
+
+        </Selector>
     };
 };

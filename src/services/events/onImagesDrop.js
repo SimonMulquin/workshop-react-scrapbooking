@@ -18,15 +18,15 @@ export default e => {
                 const reader = new FileReader();
                 reader.onload = async d => {    
                     const url = d.target.result;
-                    const {width, height} = await GetImageDimensionsFromSrc(d.target.result);
+                    const dimensions = await GetImageDimensionsFromSrc(d.target.result);
                     return resolve({
                         filename: f.name,
                         url,
                         position: {
-                            X: e.clientX - width/2,
-                            Y: e.clientY - height/2,
+                            X: e.clientX - dimensions.width/2,
+                            Y: e.clientY - dimensions.height/2,
                         },
-                        width,
+                        dimensions,
                     });
                 }
                 reader.readAsDataURL(f);

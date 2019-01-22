@@ -1,7 +1,7 @@
-export const ADD_ITEM = ({filename, url, position, width}) => ({
+export const ADD_ITEM = ({filename, url, position, dimensions}) => ({
     type: "ADD_ITEM",
     filename,
     url,
     position,
-    width,
+    dimensions,
 });
