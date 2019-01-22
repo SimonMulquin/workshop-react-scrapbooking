@@ -21,6 +21,18 @@ export default class Image extends Component {
         };
     };
 
+    componentDidMount(){
+        document.addEventListener('keydown', e => {
+            switch(e.key){
+                case "Backspace":
+                    this.onDeletePress();
+                    break;
+                default:
+                    break;
+            }
+        })
+    }
+
     componentDidUpdate(_, state){
         if (this.state.dragging && !state.dragging) {
             document.addEventListener('mousemove', this.onMouseMove.bind(this))
@@ -31,10 +43,13 @@ export default class Image extends Component {
         };
     };
 
+    onDeletePress(){
+        console.log("delete")
+    }
+
     onMouseDown(e){
         e.preventDefault();
         e.stopPropagation();
-        document.body.style.cursor = "move";
         const x = this.image.offsetLeft;
         const y = this.image.offsetTop;
         this.setState({
@@ -49,7 +64,6 @@ export default class Image extends Component {
     onMouseUp(e) {
         e.stopPropagation();
         e.preventDefault();
-        document.body.style.cursor = "default";
         this.setState({dragging: false});
     };
 
