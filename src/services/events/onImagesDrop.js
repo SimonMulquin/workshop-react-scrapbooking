@@ -1,3 +1,5 @@
+import { GetImageDimensionsFromSrc } from "services/DOM";
+
 export default e => {
     e.stopPropagation();
     e.preventDefault();
@@ -14,14 +16,19 @@ export default e => {
                     reject("Le fichier " + f.name + " n'est pas considéré comme une image.")
                 };
                 const reader = new FileReader();
-                reader.onload = d => resolve({
-                    filename: f.name,
-                    url: d.target.result,
-                    position: {
-                        X: e.clientX,
-                        Y: e.clientY,
-                    },
-                });
+                reader.onload = async d => {    
+                    const url = d.target.result;
+                    const {width, height} = await GetImageDimensionsFromSrc(d.target.result);
+                    return resolve({
+                        filename: f.name,
+                        url,
+                        position: {
+                            X: e.clientX - width/2,
+                            Y: e.clientY - height/2,
+                        },
+                        width,
+                    });
+                }
                 reader.readAsDataURL(f);
             })
         ], i + 1)

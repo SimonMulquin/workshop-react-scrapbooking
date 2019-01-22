@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { connect } from 'react-redux';
 
 import config from "config";
-import { onImagesDrop } from "services/files";
+import { onImagesDrop } from "services/events";
 import { ADD_ITEM } from 'api/redux/actions';
 import { StyledDropZone } from './style';
 
@@ -17,6 +17,7 @@ class DropZone extends Component {
                 i => this.props.addItem(i)
             ))
             .catch(err => alert(err))
+
         }, false)
     };
 

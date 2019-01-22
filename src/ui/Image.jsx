@@ -41,7 +41,7 @@ export default class Image extends Component {
             dragging: true,
             rel: {
                 X: e.pageX - x,
-                Y: e.pageY - y + headerHeight,
+                Y: e.pageY - y,
             }
         });
     };
