@@ -2,7 +2,7 @@ import uniqid from 'uniqid';
 
 export default (state = {maxZ: 2, items: {}}, action) => {
     if (action.type === "ADD_ITEM") {
-        const {filename, url} = action;
+        const {filename, url, position} = action;
         const id = uniqid();
         const maxZ = state.maxZ + 1;
         const items = {...state.items};
@@ -11,8 +11,7 @@ export default (state = {maxZ: 2, items: {}}, action) => {
             filename,
             url,
             position: {
-                X: 0,
-                Y: 0,
+                ...position,
                 Z: maxZ,
             },
             width: 400,

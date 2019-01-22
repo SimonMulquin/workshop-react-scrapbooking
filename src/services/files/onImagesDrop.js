@@ -14,9 +14,13 @@ export default e => {
                     reject("Le fichier " + f.name + " n'est pas considéré comme une image.")
                 };
                 const reader = new FileReader();
-                reader.onload = e => resolve({
+                reader.onload = d => resolve({
                     filename: f.name,
-                    url: e.target.result,
+                    url: d.target.result,
+                    position: {
+                        X: e.clientX,
+                        Y: e.clientY,
+                    },
                 });
                 reader.readAsDataURL(f);
             })
